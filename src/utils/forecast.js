@@ -20,7 +20,7 @@ const forecast = (latitude, longitude, callback) => {
                     response.data.main.temp +
                     " degrees out and Weather is " +
                     response.data.weather[0].main +
-                    "." +
+                    " throughout the day. " +
                     "Speed of wind is " +
                     response.data.wind.speed +
                     " km/h"
