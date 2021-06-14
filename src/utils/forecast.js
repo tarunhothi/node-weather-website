@@ -1,4 +1,5 @@
 const axios = require("axios");
+
 const forecast = (latitude, longitude, callback) => {
     const url =
         "https://api.openweathermap.org/data/2.5/weather?lat=" +
@@ -17,8 +18,12 @@ const forecast = (latitude, longitude, callback) => {
                     "error",
                     "it is currently " +
                     response.data.main.temp +
-                    " degrees out and country is " +
-                    response.data.sys.country
+                    " degrees out and Weather is " +
+                    response.data.weather[0].main +
+                    "." +
+                    "Speed of wind is " +
+                    response.data.wind.speed +
+                    " km/h"
                 );
             }
         })
